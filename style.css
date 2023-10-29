@@ -1,0 +1,173 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Variabel */
+:root {
+    --text-color:#ededed;
+    --hover-color:#12f7ff;
+    --bg-color:#081b29;
+    --secon-bg-color:#112e42;
+    --main-color: #00abf0;
+    --big-font:2.5rem;
+    --normal-font:2rem;
+    --h2-font: 3rem
+}
+
+/* Reset Css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    padding-top: 5rem;
+    padding: 100px 10%;
+}
+
+/* navbar css */
+.navbar {
+    background-color: var(--secon-bg-color);
+}
+
+.navbar-brand {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+ 
+.nav-item {
+    font-weight: 700;
+    padding: 10px 20px;
+}
+
+/* about css */
+.about-sci {
+    margin-top: 5rem;
+}
+
+.about-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 50%;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.about-sci:hover {
+    color: var(--secon-bg-color);
+}
+
+.about-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.about-sci a:hover:before {
+    width: 100%;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 2em;
+    background: var(--secon-bg-color);
+}
+
+.about-content span {
+    color: var(--text-color);
+    font-size: .8rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.about-content h2 {
+    color: var(--hover-color);
+    font-weight: 700;
+    font-size: var(--normal-font);
+}
+
+.about-content p {
+    color: #fdfdfd;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+/* project section css */
+.main-text {
+    width: 100%;
+    color: var(--hover-color);
+}
+
+.main-text h2 {
+    font-weight: 700;
+    font-size: var(--normal-font)
+}
+
+.main-text span {
+    color: var(--text-color);
+    font-size: .8rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.projects .card .card-img-top {
+    height: 260px;
+    object-fit: cover;
+}
+
+/* contact css */
+.contact {
+    background: var(--secon-bg-color);
+    width: 100%;
+}
+
+.contact h2 {
+    color: var(--hover-color);
+}
+
+.contact form {
+    text-align: center;
+    max-width: 50rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    color: var(--text-color);
+    background: var(--bg-color);
+    margin-bottom: .8rem;
+    border: none;
+    border-radius: 5px;
+    padding: .7rem;
+}
+
+.contact form textarea {
+    resize: none;
+}
